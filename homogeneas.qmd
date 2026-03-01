@@ -1,0 +1,229 @@
+# Ecuaciones Diferenciales Homogéneas (EDH)
+
+Cuando una ecuación diferencial se presente en la forma
+
+$$
+\frac{dy}{dx}=f\left(\frac{y}{x}\right)
+$$
+
+es decir, que la función es una razón o proporción de $y$ sobre $x$, y por ende, no se pueda separar en variables, podemos decir que es una EDH. Incluso, puede darse esta forma aunque de antemano no la presente.
+
+Una vez confirmado que es una EDH, puede realizarse una sustitución del tipo
+
+$$
+y=xv
+$$
+
+y la ecuación diferencial queda de la forma
+
+$$
+\frac{dy}{dx}=f(v)
+$$
+
+Considerando a $v$ como la nueva variable dependiente, se le considera función de $x$, sustituyendo $dy/dx$ en la tercera ecuación y derivando la segunda, obtenemos:
+
+$$
+\frac{dy}{dx}=x\frac{dv}{dx}+v
+$$
+
+Quedando esta última ecuación como
+
+$$
+x\frac{dv}{dx}+v=f(v)
+$$
+
+Esta ecuación puede ser separada, para así resolverse como ya se ha visto:
+
+$$
+\frac{dx}{x}=\frac{dv}{f(v)-v}
+$$
+
+La cual debe integrarse y luego sustituirse $v$ por $y/x$ en el segundo miembro, para obtener la solución de la EDH.
+
+### Ejemplo
+
+Resolver la ecuación diferencial:
+
+$$
+\frac{dy}{dx}=\frac{y^2+2xy}{x^2}
+$$
+
+Separando las fracciones, obtenemos:
+
+$$
+\frac{dy}{dx}=\frac{y^2}{x^2}+\frac{2xy}{x^2}=\frac{y^2}{x^2}+\frac{2y}{x}=\left(\frac{y}{x}\right)^2+2\left(\frac{y}{x}\right)
+$$
+
+Sustituyendo $y/x$ por $v$, queda
+
+$$
+x\frac{dv}{dx}+v=v^2+2v
+$$
+
+Separando variables (despejando)
+
+$$
+x\frac{dv}{dx}=v^2+2v-v=$$
+
+$$x\frac{dv}{dx}=v^2+v$$
+
+$$\frac{dx}{x}=\frac{dv}{v^2+v}\rightarrow \frac{dx}{x}=\frac{dv}{v(v+1)} $$
+
+En este punto, podemos ya integrar:
+
+$$
+\int{\frac{dx}{x}}=\int{\frac{dv}{v(v+1)}}
+$$
+
+::: {.callout-note}
+
+## Fracciones parciales
+
+La segunda integral se resuelve mediante la descomposición en fracciones parciales.
+
+$$ \frac{1}{v(v+1)}=\frac{a}{v}+\frac{b}{v+1} $$
+
+$$ \frac{1}{v(v+1)}= \frac{a(v+1)+bv}{v(v+1)} $$
+
+$$ 1=a(v+1)+bv \rightarrow av+bv+a=1 $$
+
+$$ a+b=0$$
+$$ a=1$$
+
+$$ \boxed{a=1}$$
+
+$$ \boxed{b=-1} $$
+
+:::
+
+La segunda integral ya está separada:
+$$
+ln|x|+ln|C|=\int{\frac{dv}{v}}-\int{\frac{dv}{v+1}}\\
+ln|x|+ln|C|=ln|v|-ln|v+1|
+$$
+
+::: {.callout-note}
+
+## Propiedades de los logaritmos
+
+$$ ln|a|+ln|b|=ln|ab|$$
+
+$$ln|a|-ln|b|=ln\left|\frac{a}{b}\right| $$
+
+:::
+
+Por propiedad de logaritmos:
+
+$$
+ln|Cx|=ln\left|\frac{v}{v+1}\right|
+$$
+
+Y eliminando mediante *Euler*:
+
+$$
+e^{ln|Cx|}=e^{ln\left|\frac{v}{v+1}\right|}$$
+
+$$ Cx=\frac{v}{v+1} $$
+$$ (v+1)Cx=v $$
+$$ Cvx+Cx=v $$
+
+Sustituyendo $v=y/x$
+
+$$ Cx\frac{y}{x}+Cx=\frac{y}{x} $$
+$$ Cy+Cx=\frac{y}{x} $$
+$$ Cxy+Cx^2=y $$
+$$ Cxy-y=-Cx^2 $$
+$$ y(Cx-1)=-Cx^2 $$
+$$ \boxed{y=-\frac{Cx^2}{Cx-1}} $$
+
+### Ejercicio 8
+
+$$
+\frac{dy}{dx}=\frac{x+y}{x}
+$$
+
+
+Separando fracciones:
+
+$$ \frac{dy}{dx}=\frac{x+y}{x} $$
+$$ \frac{dy}{dx}=\frac{x}{x}+\frac{y}{x} $$
+$$ \frac{dy}{dx}=1+\frac{y}{x} $$
+
+Sustituyendo $v=y/x$:
+
+$$
+x\frac{dv}{dx}+v=1+v
+$$
+
+Despejando y separando variables:
+
+$$ x\frac{dv}{dx}=1+v-v $$
+$$ x\frac{dv}{dx}=1 $$
+$$ x\ dv=dx $$
+$$ dv=\frac{dx}{x} $$
+
+Integrando:
+
+$$ \int{dv}=\int{\frac{dx}{x}} $$
+$$ v=ln|x|+ln|C| $$
+$$ v=ln|Cx| $$
+
+Volviendo $v$ a su valor original:
+
+$$ \frac{y}{x}=ln|Cx| $$
+$$ \boxed{y=x\ ln|Cx|} $$
+
+
+### Ejercicio 9
+
+$$
+2y\ dx-x\ dy=0\\
+$$
+
+Dando la forma:
+
+$$ 2y\ dx=x\ dy $$
+$$ \frac{2y}{x}=\frac{dy}{dx} $$
+$$ \frac{dy}{dx}=\frac{2y}{x} $$
+$$ \frac{dy}{dx}=2\frac{y}{x} $$
+
+Sustituyendo:
+
+$$
+x\frac{dv}{dx}+v=2v
+$$
+
+Desarrollando:
+
+$$ x\frac{dv}{dx}=2v-v $$
+$$ x\frac{dv}{dx}=v $$
+$$ \frac{dv}{v}=\frac{dx}{x} $$
+
+Integrando:
+
+$$ \int{\frac{dx}{x}}=\int{\frac{dv}{v}} $$
+$$ ln|x|+ln|C|=ln|v| $$
+
+Simplificando y eliminando logaritmos:
+
+$$ ln|Cx|=ln|v| $$
+$$ e^{ln|Cx|}=e^{ln|v|} $$
+$$ Cx=v $$
+
+Volviendo al valor original:
+
+$$ Cx=\frac{y}{x} $$
+$$ \boxed{y=Cx^2} $$
+
+### Ejercicio 10
+
+Resolver la EDH:
+
+$$
+\frac{dy}{dx}=\frac{x^2+xy+y^2}{x^2}
+$$
+
+$$ ln|Cx|=arctan(v) $$
+$$ tan(ln|Cx|)=v $$
+$$ tan(ln|Cx|)=\frac{y}{x} $$
+$$ \boxed{y=x\ tan(ln|Cx|)} $$

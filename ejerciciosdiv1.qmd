@@ -1,0 +1,57 @@
+# Ejercicios diversos
+
+## Ejercicio 1
+$$
+\frac{dy}{dx}=\frac{x^3-2y}{x}
+$$
+
+## Ejercicio 2
+$$
+(x+y)dx-(x-y)dy=0
+$$
+
+## Ejercicio 3
+$$
+\frac{dy}{dx}=\frac{2x+y}{3+3y^2-x}
+$$
+
+## Ejercicio 4
+$$
+(x+e^y)dy-dx=0
+$$
+
+
+## Ejercicio 5
+$$
+\frac{dy}{dx}=-\frac{2xy+y^2+1}{x^2+2xy}
+$$
+
+## Ejercicio 6
+$$
+x\frac{dy}{dx}+xy=1-y;\ y(1)=0
+$$
+
+## Ejercicio 7
+$$
+\frac{dy}{dx}=\frac{x}{x^2y+y^3}
+$$
+
+## Ejercicio 8
+$$
+x\frac{dy}{dx}+2y=\frac{sen(x)}{x}; \ y(2)=1
+$$
+
+## Ejercicio 9
+$$
+\frac{dy}{dx}=-\frac{2xy+1}{x^2+2y}
+$$
+
+## Ejercicio 10
+$$
+(3y^2+2xy)dx-(2xy+x^2)dy=0
+$$
+
+## Ejercicio 11
+$$
+(x^2+y)dx+(x+e^y)dy=0
+$$

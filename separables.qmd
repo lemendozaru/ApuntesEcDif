@@ -1,0 +1,129 @@
+# Variables Separables
+
+Comenzaremos con el estudio de las ecuaciones diferenciales que en teoría son más sencillas de resolver: las que pueden descomponerse en funciones que contengan únicamente la variable del diferencial adecuado. Es decir, pasar de
+
+$$
+M(x,y)+N(x,y)\frac{dy}{dx}=0
+$$
+
+a
+
+$$
+n(y)dy=m(x)dx
+$$
+
+Veamos el siguiente ejemplo:
+
+## Ejemplos
+
+### Ejemplo 1
+
+Resolver la ecuación diferencial
+
+$$
+\frac{dR}{dt}=-kR
+$$
+
+El primer paso es separar las variables de manera que queden multiplicando o dividiendo por su respectivo diferencial.
+
+$$
+dR =-kRdt
+$$
+
+$$
+\frac{dR}{R}=-kdt
+$$
+
+El segundo paso es eliminar los diferenciales. Esto se consigue integrando ambos miembros de la ecuación:
+
+$$
+\int{\frac{dR}{R}}=\int{-kdt}
+$$
+
+$$
+\mathrm{ln}(R)=-kt+C
+$$
+
+El tercer paso consiste en despejar la variable dependiente y encontrar su valor.
+
+::: {.callout-note}
+
+## Propiedades de los logaritmos:
+
+$$
+\mathrm{e}^{\mathrm{ln}(v)}=v
+$$
+
+:::
+
+$$
+\mathrm{e}^{\mathrm{ln}(R)}=\mathrm{e}^{-kt+C}
+$$
+
+Continuando:
+
+$$
+R=e^{-kt+C}
+$$
+
+::: {.callout-note}
+
+## Propiedades de los exponentes:
+
+$$
+a^{b}\cdot a^c=a^{b+c}
+$$
+
+:::
+
+Separamos ambos exponentes del número de Euler para simplificar:
+
+$$
+R=e^{-kt}\cdot e^C
+$$
+
+$$
+\boxed{R=Ce^{-kt}}
+$$
+
+### Ejemplo 2
+
+$$
+\frac{dy}{dx}=\frac{x^2}{y}
+$$
+
+Separemos:
+
+$$
+y\ dy=x^2\ dx
+$$
+
+Integremos:
+
+$$
+\int{y\ dy}= \int{x^2\ dx}
+$$
+
+$$
+\frac{y^2}{2}=\frac{x^3}{3}+C
+$$
+
+Despejemos la variable dependiente:
+
+$$
+y^2=\frac{2x^3}{3}+C
+$$
+
+$$
+\boxed{y=\sqrt{\frac{2x^3}{3}}+C}
+$$
+
+## Ejercicios
+
+### Ejercicio 1
+
+$$ y=\sqrt{\frac{2x^3}{3}}+C $$
+
+### Ejercicio 2
+
+$$ \frac{dy}{dx}=1+x+y^2+xy^2 $$

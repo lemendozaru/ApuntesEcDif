@@ -1,0 +1,62 @@
+# Factores Integrantes
+
+Se aplican a una ED no lineal que no es exacta, para convertirla en una EDE, mediante la multiplicación de dicha ecuación por un término $\mu$ que llamaremos *factor integrante*.
+
+1. Para obtener dicho factor integrante, se toma la ecuación y se verifica que no sea exacta.
+
+2. Se recuperan las derivadas parciales que se usaron para dicha verificación y se resuelve la siguiente operación diferencial:
+
+$$
+\frac{d\mu}{dx}=\frac{\frac{\partial{M}}{\partial{y}}-\frac{\partial{N}}{\partial{x}}}{N}\mu
+$$
+
+3. El resultado de esta operación se multiplicará por la ecuación diferencial original para volverla exacta, **si y solo si es una función de $x$**. Sin embargo, deberá verificarse que efectivamente se haya vuelto exacta.
+4. Se resuelve la EDE resultante.
+
+### Ejemplo
+
+Determinar un factor integrante para la ecuación
+
+$$
+(3xy+y^2)+(x^2+xy)\frac{dy}{dx}=0
+$$
+
+y resolverla.
+
+1. Verificar que sea exacta:
+
+   $$ \frac{\partial{M}}{\partial{y}}=3x+2y $$
+   $$ \frac{\partial{N}}{\partial{x}}=2x+y    $$
+
+2. Sustituimos en la fórmula indicada:
+
+   $$ \frac{d\mu}{dx}=\frac{\frac{\partial{M}}{\partial{y}}-\frac{\partial{N}}{\partial{x}}}{N}\mu $$
+   $$ \frac{d\mu}{dx}=\frac{(3x+2y)-(2x+y)}{x^2+xy}\mu $$
+   $$ \frac{d\mu}{dx}=\frac{3x+2y-2x-y}{x^2+xy}\mu $$
+   $$ \frac{d\mu}{dx}=\frac{x+y}{x(x+y)}\mu $$
+   $$ \frac{d\mu}{dx}=\frac{\mu}{x} $$
+   $$ \frac{d\mu}{\mu}=\frac{dx}{x}\rightarrow \int{\frac{d\mu}{\mu}}=\int{\frac{dx}{x}} $$
+   $$ ln|\mu|=ln|x| $$
+   $$\mu=x $$
+
+3. Multiplicamos dicho factor integrante por la ED:
+
+   $$ x[(3xy+y^2)dx+(x^2+xy)dy]=0 $$
+   $$ (3x^2y+xy^2)dx+(x^3+x^2y)dy=0 $$
+
+   Confirmamos que se haya vuelto una EDE:
+
+   $$ \frac{\partial{M}}{\partial{y}}=3x^2+2xy $$
+   $$ \frac{\partial{N}}{\partial{x}}=3x^2+2xy $$
+
+4. Resolvamos la EDE y encontramos la solución general:
+
+   $$
+   \int{M(x,y)dx}=\int{(3x^2y+xy^2)dx}=x^3y+\frac{x^2y^2}{2}+\psi(y)
+   $$
+
+5. Encontramos la solución particular:
+
+   $$ \psi(y)=\int{0}\ dy $$
+   $$\psi(y)=0 $$
+   $$ \boxed{x^3y+\frac{x^2y^2}{2}+0=c} $$

@@ -1,0 +1,140 @@
+# Ecuaciones Diferenciales Exactas (EDE)
+
+## Procedimiento
+
+#### Paso 1
+
+Asegurarse que la expresión tenga la forma:
+
+$$ M(x,y)dx+N(x,y)dy=0 $$
+
+#### Paso 2
+
+Derivar parcialmente ambas expresiones con respecto a la variable contraria a su diferencial. Luego, comprobar que sea una EDE:
+
+$$ \frac{\partial{M}}{\partial{y}}=\frac{\partial{N}}{\partial{x}} $$
+
+#### Paso 3
+
+Se integra $M(x,y)dx$ y se agrega la función desconocida $\psi(y$) al resultado
+
+$$ \int{M(x,y)dx}=\phi(x,y)+\psi(y) $$
+
+#### Paso 4
+
+Se calcula $\psi(y)$. Para ello, se toma $N(x,y)$ y se eliminan todos los términos que contengan la variable $x$. Luego, se integra lo restante con respecto a $y$:
+
+$$ \psi(y)=\int{N(y)dy} $$
+
+#### Paso 5
+
+La solución a la ecuación diferencial es:
+
+$$ \phi(x,y)+\psi(y)=c $$
+
+### Ejemplo
+
+$$ (y\ cos\ x+2xe^y)dx+(sen\ x+x^2e^y+2)dy=0 $$
+
+#### Paso 1
+
+Tiene la forma adecuada.
+
+#### Paso 2
+
+Confirmar que sí sea una EDE. Primero con $M$
+
+$$ \frac{\partial{M}}{\partial{y}}=\frac{\partial{(y\ cos\ x+2xe^y)}}{\partial{y}}=cos\ x+2xe^y $$
+
+Luego con $N$
+
+$$ \frac{\partial{N}}{\partial{x}}=\frac{\partial{(sen\ x+x^2e^y+2)}}{\partial{x}}=cos\ x+2xe^y $$
+
+Al ser iguales, se confirma que es una EDE.
+
+#### Paso 3
+
+Integramos $M$
+
+$$ \int{(y\ cos\ x+2xe^y)dx}=y\int{(cos\ x)\ dx}+2e^y \int{x\ dx} $$
+
+$$ y\ sen\ x+\frac{2x^2e^y}{2}= $$
+
+$$ y\ sen\ x+x^2e^y+\psi(y) $$
+
+#### Paso 4
+
+$$
+N(x,y)=sen\ x+x^2e^y+2
+$$
+
+Eliminando todo lo que contenga alguna $x$:
+
+$$ N(y)=2 $$
+
+Integramos:
+
+$$ \psi(y)=\int{2}dy=2y $$
+
+#### Paso 5
+
+Unimos ambos resultados:
+
+$$ \boxed{y\ sen\ x+x^2e^y+2y=c} $$
+
+### Ejercicio 5
+
+$$
+(5x+4y)dx+(4x-8y^3)dy=0
+$$
+
+Confirmar que sean exactas:
+$$
+\frac{\partial{(5x+4y)}}{\partial{y}}= 4\\
+\frac{\partial{(4x-8y^3)}}{\partial{x}}=4
+$$
+Es una EDE.
+$$
+\int{(5x+4y)}dx=\frac{5x^2}{2}+4xy+\psi(y)
+$$
+Solución general.
+$$
+\psi(y)=\int{-8y^3}dy=\frac{-8y^4}{4}=-2y^4\\
+\psi(y)=-2y^4
+$$
+Ahora toca dar la solución particular:
+$$
+\frac{5x^2}{2}+4xy-2y^4=c\\
+5x^2+8xy-4y^4=c
+$$
+
+
+### Ejercicio 6
+
+$$
+2xy^3+3x^2y^2 \frac{dy}{dx}=0\\
+(2xy^3)dx+(3x^2y^2)dy=0
+$$
+
+Verificado que es una EDE, integramos $M(x,y)dx$ y obtenemos la solución general
+$$
+\int{(2xy^3)dx}=2y^3\int{x\ dx}=\frac{2x^2y^3}{2}+\psi(y)
+$$
+Ahora calculamos el valor de $\psi(y)$
+$$
+\psi(y)=\int{0}\ dy=0
+$$
+Y con $\psi(y)$ calculada, se obtiene la solución particular
+$$
+\frac{2x^2y^3}{2}+0=c\\
+x^2y^3=c
+$$
+
+
+### Ejercicio 7
+
+$$
+(3x^2+2xy)+(x+y^2)\frac{dy}{dx}=0
+$$
+
+No es exacta, no se puede resolver con los métodos conocidos hasta este momento.

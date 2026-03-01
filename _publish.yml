@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: c20287ac-ec0d-4dbd-a6b3-89d908b9a73b
+      url: https://lemendoza.quarto.pub/ecuaciones-diferenciales

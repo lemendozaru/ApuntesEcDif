@@ -1,0 +1,263 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ecuaciones Diferenciales",
+    "section": "",
+    "text": "Prefacio\nEste sitio refleja los apuntes realizados en clase, por lo que no hay mucha teoría en los mismos. Sin embargo, no se descarta que posteriormente comience a nutrirse con mayor contenido.",
+    "crumbs": [
+      "Prefacio"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introducción",
+    "section": "",
+    "text": "Los capítulos estarán añadiéndose conforme se vaya avanzando, a su ritmo.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "separables.html",
+    "href": "separables.html",
+    "title": "2  Variables Separables",
+    "section": "",
+    "text": "2.1 Ejemplos\nComenzaremos con el estudio de las ecuaciones diferenciales que en teoría son más sencillas de resolver: las que pueden descomponerse en funciones que contengan únicamente la variable del diferencial adecuado. Es decir, pasar de\n\\[\nM(x,y)+N(x,y)\\frac{dy}{dx}=0\n\\]\na\n\\[\nn(y)dy=m(x)dx\n\\]\nVeamos el siguiente ejemplo:",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables Separables</span>"
+    ]
+  },
+  {
+    "objectID": "separables.html#ejemplos",
+    "href": "separables.html#ejemplos",
+    "title": "2  Variables Separables",
+    "section": "",
+    "text": "2.1.1 Ejemplo 1\nResolver la ecuación diferencial\n\\[\n\\frac{dR}{dt}=-kR\n\\]\nEl primer paso es separar las variables de manera que queden multiplicando o dividiendo por su respectivo diferencial.\n\\[\ndR =-kRdt\n\\]\n\\[\n\\frac{dR}{R}=-kdt\n\\]\nEl segundo paso es eliminar los diferenciales. Esto se consigue integrando ambos miembros de la ecuación:\n\\[\n\\int{\\frac{dR}{R}}=\\int{-kdt}\n\\]\n\\[\n\\mathrm{ln}(R)=-kt+C\n\\]\nEl tercer paso consiste en despejar la variable dependiente y encontrar su valor.\n\n\n\n\n\n\nNotePropiedades de los logaritmos:\n\n\n\n\\[\n\\mathrm{e}^{\\mathrm{ln}(v)}=v\n\\]\n\n\n\\[\n\\mathrm{e}^{\\mathrm{ln}(R)}=\\mathrm{e}^{-kt+C}\n\\]\nContinuando:\n\\[\nR=e^{-kt+C}\n\\]\n\n\n\n\n\n\nNotePropiedades de los exponentes:\n\n\n\n\\[\na^{b}\\cdot a^c=a^{b+c}\n\\]\n\n\nSeparamos ambos exponentes del número de Euler para simplificar:\n\\[\nR=e^{-kt}\\cdot e^C\n\\]\n\\[\n\\boxed{R=Ce^{-kt}}\n\\]\n\n\n2.1.2 Ejemplo 2\n\\[\n\\frac{dy}{dx}=\\frac{x^2}{y}\n\\]\nSeparemos:\n\\[\ny\\ dy=x^2\\ dx\n\\]\nIntegremos:\n\\[\n\\int{y\\ dy}= \\int{x^2\\ dx}\n\\]\n\\[\n\\frac{y^2}{2}=\\frac{x^3}{3}+C\n\\]\nDespejemos la variable dependiente:\n\\[\ny^2=\\frac{2x^3}{3}+C\n\\]\n\\[\n\\boxed{y=\\sqrt{\\frac{2x^3}{3}}+C}\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables Separables</span>"
+    ]
+  },
+  {
+    "objectID": "separables.html#ejercicios",
+    "href": "separables.html#ejercicios",
+    "title": "2  Variables Separables",
+    "section": "2.2 Ejercicios",
+    "text": "2.2 Ejercicios\n\n2.2.1 Ejercicio 1\n\\[ y=\\sqrt{\\frac{2x^3}{3}}+C \\]\n\n\n2.2.2 Ejercicio 2\n\\[ \\frac{dy}{dx}=1+x+y^2+xy^2 \\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Variables Separables</span>"
+    ]
+  },
+  {
+    "objectID": "valiniciales.html",
+    "href": "valiniciales.html",
+    "title": "3  Problemas con valores iniciales",
+    "section": "",
+    "text": "3.1 Ejemplo\nExisten ecuaciones diferenciales que cuentan con valores iniciales, los cuales se sustituyen en dichas expresiones cuando ya han sido eliminados sus diferenciales. Esto se utiliza cuando se desea saber el valor de las constantes de integración.\n\\[ \\frac{dy}{dx}=\\frac{x^2}{1+y^2}; \\ y(2)=1 \\]\nLos valores iniciales se leen como:\n\\[ y=1\\  \\text{cuando} \\ x=2 \\]\nPrimero se separan las variables:\n\\[ (1+y^2)\\ dy=x^2\\ dx \\]\nSe integran ambas partes:\n\\[ \\int{(1+y^2)\\ dy}=\\int{x^2\\ dx} \\rightarrow y+\\frac{y^3}{3}=\\frac{x^3}{3}+C \\]\nSustituyendo los valores iniciales:\n\\[ (1)+\\frac{(1)^3}{3}=\\frac{(2)^3}{3}+C\\rightarrow 1+\\frac{1}{3}=\\frac{8}{3}+C \\]\n\\[ \\frac{3}{3}+\\frac{1}{3}-\\frac{8}{3}=C \\]\n\\[ C=-\\frac{4}{3} \\]\nEntonces, se indica la solución particular:\n\\[ y+\\frac{y^3}{3}=\\frac{x^3}{3}-\\frac{4}{3} \\]\n\\[ \\boxed{y^3+3y-x^3+4=0} \\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Problemas con valores iniciales</span>"
+    ]
+  },
+  {
+    "objectID": "valiniciales.html#ejercicios",
+    "href": "valiniciales.html#ejercicios",
+    "title": "3  Problemas con valores iniciales",
+    "section": "3.2 Ejercicios",
+    "text": "3.2 Ejercicios\n\n3.2.1 Ejercicio 3\nResolver la siguiente ecuación diferencial con valores iniciales:\n\\[ \\frac{dr}{d\\theta}=r; \\ r(0)=2 \\]\n\n\n3.2.2 Ejercicio 4\nResolver también:\n\\[ x\\ dx+ye^{-x}\\ dy=0;\\ y(0)=1 \\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Problemas con valores iniciales</span>"
+    ]
+  },
+  {
+    "objectID": "exactas.html",
+    "href": "exactas.html",
+    "title": "4  Ecuaciones Diferenciales Exactas (EDE)",
+    "section": "",
+    "text": "4.1 Procedimiento",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Ecuaciones Diferenciales Exactas (EDE)</span>"
+    ]
+  },
+  {
+    "objectID": "exactas.html#procedimiento",
+    "href": "exactas.html#procedimiento",
+    "title": "4  Ecuaciones Diferenciales Exactas (EDE)",
+    "section": "",
+    "text": "4.1.0.1 Paso 1\nAsegurarse que la expresión tenga la forma:\n\\[ M(x,y)dx+N(x,y)dy=0 \\]\n\n\n4.1.0.2 Paso 2\nDerivar parcialmente ambas expresiones con respecto a la variable contraria a su diferencial. Luego, comprobar que sea una EDE:\n\\[ \\frac{\\partial{M}}{\\partial{y}}=\\frac{\\partial{N}}{\\partial{x}} \\]\n\n\n4.1.0.3 Paso 3\nSe integra \\(M(x,y)dx\\) y se agrega la función desconocida \\(\\psi(y\\)) al resultado\n\\[ \\int{M(x,y)dx}=\\phi(x,y)+\\psi(y) \\]\n\n\n4.1.0.4 Paso 4\nSe calcula \\(\\psi(y)\\). Para ello, se toma \\(N(x,y)\\) y se eliminan todos los términos que contengan la variable \\(x\\). Luego, se integra lo restante con respecto a \\(y\\):\n\\[ \\psi(y)=\\int{N(y)dy} \\]\n\n\n4.1.0.5 Paso 5\nLa solución a la ecuación diferencial es:\n\\[ \\phi(x,y)+\\psi(y)=c \\]\n\n\n4.1.1 Ejemplo\n\\[ (y\\ cos\\ x+2xe^y)dx+(sen\\ x+x^2e^y+2)dy=0 \\]\n\n4.1.1.1 Paso 1\nTiene la forma adecuada.\n\n\n4.1.1.2 Paso 2\nConfirmar que sí sea una EDE. Primero con \\(M\\)\n\\[ \\frac{\\partial{M}}{\\partial{y}}=\\frac{\\partial{(y\\ cos\\ x+2xe^y)}}{\\partial{y}}=cos\\ x+2xe^y \\]\nLuego con \\(N\\)\n\\[ \\frac{\\partial{N}}{\\partial{x}}=\\frac{\\partial{(sen\\ x+x^2e^y+2)}}{\\partial{x}}=cos\\ x+2xe^y \\]\nAl ser iguales, se confirma que es una EDE.\n\n\n4.1.1.3 Paso 3\nIntegramos \\(M\\)\n\\[ \\int{(y\\ cos\\ x+2xe^y)dx}=y\\int{(cos\\ x)\\ dx}+2e^y \\int{x\\ dx} \\]\n\\[ y\\ sen\\ x+\\frac{2x^2e^y}{2}= \\]\n\\[ y\\ sen\\ x+x^2e^y+\\psi(y) \\]\n\n\n4.1.1.4 Paso 4\n\\[\nN(x,y)=sen\\ x+x^2e^y+2\n\\]\nEliminando todo lo que contenga alguna \\(x\\):\n\\[ N(y)=2 \\]\nIntegramos:\n\\[ \\psi(y)=\\int{2}dy=2y \\]\n\n\n4.1.1.5 Paso 5\nUnimos ambos resultados:\n\\[ \\boxed{y\\ sen\\ x+x^2e^y+2y=c} \\]\n\n\n\n4.1.2 Ejercicio 5\n\\[\n(5x+4y)dx+(4x-8y^3)dy=0\n\\]\nConfirmar que sean exactas: \\[\n\\frac{\\partial{(5x+4y)}}{\\partial{y}}= 4\\\\\n\\frac{\\partial{(4x-8y^3)}}{\\partial{x}}=4\n\\] Es una EDE. \\[\n\\int{(5x+4y)}dx=\\frac{5x^2}{2}+4xy+\\psi(y)\n\\] Solución general. \\[\n\\psi(y)=\\int{-8y^3}dy=\\frac{-8y^4}{4}=-2y^4\\\\\n\\psi(y)=-2y^4\n\\] Ahora toca dar la solución particular: \\[\n\\frac{5x^2}{2}+4xy-2y^4=c\\\\\n5x^2+8xy-4y^4=c\n\\]\n\n\n4.1.3 Ejercicio 6\n\\[\n2xy^3+3x^2y^2 \\frac{dy}{dx}=0\\\\\n(2xy^3)dx+(3x^2y^2)dy=0\n\\]\nVerificado que es una EDE, integramos \\(M(x,y)dx\\) y obtenemos la solución general \\[\n\\int{(2xy^3)dx}=2y^3\\int{x\\ dx}=\\frac{2x^2y^3}{2}+\\psi(y)\n\\] Ahora calculamos el valor de \\(\\psi(y)\\) \\[\n\\psi(y)=\\int{0}\\ dy=0\n\\] Y con \\(\\psi(y)\\) calculada, se obtiene la solución particular \\[\n\\frac{2x^2y^3}{2}+0=c\\\\\nx^2y^3=c\n\\]\n\n\n4.1.4 Ejercicio 7\n\\[\n(3x^2+2xy)+(x+y^2)\\frac{dy}{dx}=0\n\\]\nNo es exacta, no se puede resolver con los métodos conocidos hasta este momento.",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Ecuaciones Diferenciales Exactas (EDE)</span>"
+    ]
+  },
+  {
+    "objectID": "homogeneas.html",
+    "href": "homogeneas.html",
+    "title": "5  Ecuaciones Diferenciales Homogéneas (EDH)",
+    "section": "",
+    "text": "Cuando una ecuación diferencial se presente en la forma\n\\[\n\\frac{dy}{dx}=f\\left(\\frac{y}{x}\\right)\n\\]\nes decir, que la función es una razón o proporción de \\(y\\) sobre \\(x\\), y por ende, no se pueda separar en variables, podemos decir que es una EDH. Incluso, puede darse esta forma aunque de antemano no la presente.\nUna vez confirmado que es una EDH, puede realizarse una sustitución del tipo\n\\[\ny=xv\n\\]\ny la ecuación diferencial queda de la forma\n\\[\n\\frac{dy}{dx}=f(v)\n\\]\nConsiderando a \\(v\\) como la nueva variable dependiente, se le considera función de \\(x\\), sustituyendo \\(dy/dx\\) en la tercera ecuación y derivando la segunda, obtenemos:\n\\[\n\\frac{dy}{dx}=x\\frac{dv}{dx}+v\n\\]\nQuedando esta última ecuación como\n\\[\nx\\frac{dv}{dx}+v=f(v)\n\\]\nEsta ecuación puede ser separada, para así resolverse como ya se ha visto:\n\\[\n\\frac{dx}{x}=\\frac{dv}{f(v)-v}\n\\]\nLa cual debe integrarse y luego sustituirse \\(v\\) por \\(y/x\\) en el segundo miembro, para obtener la solución de la EDH.\n\n5.0.1 Ejemplo\nResolver la ecuación diferencial:\n\\[\n\\frac{dy}{dx}=\\frac{y^2+2xy}{x^2}\n\\]\nSeparando las fracciones, obtenemos:\n\\[\n\\frac{dy}{dx}=\\frac{y^2}{x^2}+\\frac{2xy}{x^2}=\\frac{y^2}{x^2}+\\frac{2y}{x}=\\left(\\frac{y}{x}\\right)^2+2\\left(\\frac{y}{x}\\right)\n\\]\nSustituyendo \\(y/x\\) por \\(v\\), queda\n\\[\nx\\frac{dv}{dx}+v=v^2+2v\n\\]\nSeparando variables (despejando)\n\\[\nx\\frac{dv}{dx}=v^2+2v-v=\\]\n\\[x\\frac{dv}{dx}=v^2+v\\]\n\\[\\frac{dx}{x}=\\frac{dv}{v^2+v}\\rightarrow \\frac{dx}{x}=\\frac{dv}{v(v+1)} \\]\nEn este punto, podemos ya integrar:\n\\[\n\\int{\\frac{dx}{x}}=\\int{\\frac{dv}{v(v+1)}}\n\\]\n\n\n\n\n\n\nNoteFracciones parciales\n\n\n\nLa segunda integral se resuelve mediante la descomposición en fracciones parciales.\n\\[ \\frac{1}{v(v+1)}=\\frac{a}{v}+\\frac{b}{v+1} \\]\n\\[ \\frac{1}{v(v+1)}= \\frac{a(v+1)+bv}{v(v+1)} \\]\n\\[ 1=a(v+1)+bv \\rightarrow av+bv+a=1 \\]\n\\[ a+b=0\\] \\[ a=1\\]\n\\[ \\boxed{a=1}\\]\n\\[ \\boxed{b=-1} \\]\n\n\nLa segunda integral ya está separada: \\[\nln|x|+ln|C|=\\int{\\frac{dv}{v}}-\\int{\\frac{dv}{v+1}}\\\\\nln|x|+ln|C|=ln|v|-ln|v+1|\n\\]\n\n\n\n\n\n\nNotePropiedades de los logaritmos\n\n\n\n\\[ ln|a|+ln|b|=ln|ab|\\]\n\\[ln|a|-ln|b|=ln\\left|\\frac{a}{b}\\right| \\]\n\n\nPor propiedad de logaritmos:\n\\[\nln|Cx|=ln\\left|\\frac{v}{v+1}\\right|\n\\]\nY eliminando mediante Euler:\n\\[\ne^{ln|Cx|}=e^{ln\\left|\\frac{v}{v+1}\\right|}\\]\n\\[ Cx=\\frac{v}{v+1} \\] \\[ (v+1)Cx=v \\] \\[ Cvx+Cx=v \\]\nSustituyendo \\(v=y/x\\)\n\\[ Cx\\frac{y}{x}+Cx=\\frac{y}{x} \\] \\[ Cy+Cx=\\frac{y}{x} \\] \\[ Cxy+Cx^2=y \\] \\[ Cxy-y=-Cx^2 \\] \\[ y(Cx-1)=-Cx^2 \\] \\[ \\boxed{y=-\\frac{Cx^2}{Cx-1}} \\]\n\n\n5.0.2 Ejercicio 8\n\\[\n\\frac{dy}{dx}=\\frac{x+y}{x}\n\\]\nSeparando fracciones:\n\\[ \\frac{dy}{dx}=\\frac{x+y}{x} \\] \\[ \\frac{dy}{dx}=\\frac{x}{x}+\\frac{y}{x} \\] \\[ \\frac{dy}{dx}=1+\\frac{y}{x} \\]\nSustituyendo \\(v=y/x\\):\n\\[\nx\\frac{dv}{dx}+v=1+v\n\\]\nDespejando y separando variables:\n\\[ x\\frac{dv}{dx}=1+v-v \\] \\[ x\\frac{dv}{dx}=1 \\] \\[ x\\ dv=dx \\] \\[ dv=\\frac{dx}{x} \\]\nIntegrando:\n\\[ \\int{dv}=\\int{\\frac{dx}{x}} \\] \\[ v=ln|x|+ln|C| \\] \\[ v=ln|Cx| \\]\nVolviendo \\(v\\) a su valor original:\n\\[ \\frac{y}{x}=ln|Cx| \\] \\[ \\boxed{y=x\\ ln|Cx|} \\]\n\n\n5.0.3 Ejercicio 9\n\\[\n2y\\ dx-x\\ dy=0\\\\\n\\]\nDando la forma:\n\\[ 2y\\ dx=x\\ dy \\] \\[ \\frac{2y}{x}=\\frac{dy}{dx} \\] \\[ \\frac{dy}{dx}=\\frac{2y}{x} \\] \\[ \\frac{dy}{dx}=2\\frac{y}{x} \\]\nSustituyendo:\n\\[\nx\\frac{dv}{dx}+v=2v\n\\]\nDesarrollando:\n\\[ x\\frac{dv}{dx}=2v-v \\] \\[ x\\frac{dv}{dx}=v \\] \\[ \\frac{dv}{v}=\\frac{dx}{x} \\]\nIntegrando:\n\\[ \\int{\\frac{dx}{x}}=\\int{\\frac{dv}{v}} \\] \\[ ln|x|+ln|C|=ln|v| \\]\nSimplificando y eliminando logaritmos:\n\\[ ln|Cx|=ln|v| \\] \\[ e^{ln|Cx|}=e^{ln|v|} \\] \\[ Cx=v \\]\nVolviendo al valor original:\n\\[ Cx=\\frac{y}{x} \\] \\[ \\boxed{y=Cx^2} \\]\n\n\n5.0.4 Ejercicio 10\nResolver la EDH:\n\\[\n\\frac{dy}{dx}=\\frac{x^2+xy+y^2}{x^2}\n\\]\n\\[ ln|Cx|=arctan(v) \\] \\[ tan(ln|Cx|)=v \\] \\[ tan(ln|Cx|)=\\frac{y}{x} \\] \\[ \\boxed{y=x\\ tan(ln|Cx|)} \\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ecuaciones Diferenciales Homogéneas (EDH)</span>"
+    ]
+  },
+  {
+    "objectID": "factint.html",
+    "href": "factint.html",
+    "title": "6  Factores Integrantes",
+    "section": "",
+    "text": "Se aplican a una ED no lineal que no es exacta, para convertirla en una EDE, mediante la multiplicación de dicha ecuación por un término \\(\\mu\\) que llamaremos factor integrante.\n\nPara obtener dicho factor integrante, se toma la ecuación y se verifica que no sea exacta.\nSe recuperan las derivadas parciales que se usaron para dicha verificación y se resuelve la siguiente operación diferencial:\n\n\\[\n\\frac{d\\mu}{dx}=\\frac{\\frac{\\partial{M}}{\\partial{y}}-\\frac{\\partial{N}}{\\partial{x}}}{N}\\mu\n\\]\n\nEl resultado de esta operación se multiplicará por la ecuación diferencial original para volverla exacta, si y solo si es una función de \\(x\\). Sin embargo, deberá verificarse que efectivamente se haya vuelto exacta.\nSe resuelve la EDE resultante.\n\n\n6.0.1 Ejemplo\nDeterminar un factor integrante para la ecuación\n\\[\n(3xy+y^2)+(x^2+xy)\\frac{dy}{dx}=0\n\\]\ny resolverla.\n\nVerificar que sea exacta:\n\\[ \\frac{\\partial{M}}{\\partial{y}}=3x+2y \\] \\[ \\frac{\\partial{N}}{\\partial{x}}=2x+y    \\]\nSustituimos en la fórmula indicada:\n\\[ \\frac{d\\mu}{dx}=\\frac{\\frac{\\partial{M}}{\\partial{y}}-\\frac{\\partial{N}}{\\partial{x}}}{N}\\mu \\] \\[ \\frac{d\\mu}{dx}=\\frac{(3x+2y)-(2x+y)}{x^2+xy}\\mu \\] \\[ \\frac{d\\mu}{dx}=\\frac{3x+2y-2x-y}{x^2+xy}\\mu \\] \\[ \\frac{d\\mu}{dx}=\\frac{x+y}{x(x+y)}\\mu \\] \\[ \\frac{d\\mu}{dx}=\\frac{\\mu}{x} \\] \\[ \\frac{d\\mu}{\\mu}=\\frac{dx}{x}\\rightarrow \\int{\\frac{d\\mu}{\\mu}}=\\int{\\frac{dx}{x}} \\] \\[ ln|\\mu|=ln|x| \\] \\[\\mu=x \\]\nMultiplicamos dicho factor integrante por la ED:\n\\[ x[(3xy+y^2)dx+(x^2+xy)dy]=0 \\] \\[ (3x^2y+xy^2)dx+(x^3+x^2y)dy=0 \\]\nConfirmamos que se haya vuelto una EDE:\n\\[ \\frac{\\partial{M}}{\\partial{y}}=3x^2+2xy \\] \\[ \\frac{\\partial{N}}{\\partial{x}}=3x^2+2xy \\]\nResolvamos la EDE y encontramos la solución general:\n\\[\n\\int{M(x,y)dx}=\\int{(3x^2y+xy^2)dx}=x^3y+\\frac{x^2y^2}{2}+\\psi(y)\n\\]\nEncontramos la solución particular:\n\\[ \\psi(y)=\\int{0}\\ dy \\] \\[\\psi(y)=0 \\] \\[ \\boxed{x^3y+\\frac{x^2y^2}{2}+0=c} \\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Factores Integrantes</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html",
+    "href": "ejerciciosdiv1.html",
+    "title": "7  Ejercicios diversos",
+    "section": "",
+    "text": "7.1 Ejercicio 1\n\\[\n\\frac{dy}{dx}=\\frac{x^3-2y}{x}\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-2",
+    "href": "ejerciciosdiv1.html#ejercicio-2",
+    "title": "7  Ejercicios diversos",
+    "section": "7.2 Ejercicio 2",
+    "text": "7.2 Ejercicio 2\n\\[\n(x+y)dx-(x-y)dy=0\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-3",
+    "href": "ejerciciosdiv1.html#ejercicio-3",
+    "title": "7  Ejercicios diversos",
+    "section": "7.3 Ejercicio 3",
+    "text": "7.3 Ejercicio 3\n\\[\n\\frac{dy}{dx}=\\frac{2x+y}{3+3y^2-x}\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-4",
+    "href": "ejerciciosdiv1.html#ejercicio-4",
+    "title": "7  Ejercicios diversos",
+    "section": "7.4 Ejercicio 4",
+    "text": "7.4 Ejercicio 4\n\\[\n(x+e^y)dy-dx=0\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-5",
+    "href": "ejerciciosdiv1.html#ejercicio-5",
+    "title": "7  Ejercicios diversos",
+    "section": "7.5 Ejercicio 5",
+    "text": "7.5 Ejercicio 5\n\\[\n\\frac{dy}{dx}=-\\frac{2xy+y^2+1}{x^2+2xy}\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-6",
+    "href": "ejerciciosdiv1.html#ejercicio-6",
+    "title": "7  Ejercicios diversos",
+    "section": "7.6 Ejercicio 6",
+    "text": "7.6 Ejercicio 6\n\\[\nx\\frac{dy}{dx}+xy=1-y;\\ y(1)=0\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-7",
+    "href": "ejerciciosdiv1.html#ejercicio-7",
+    "title": "7  Ejercicios diversos",
+    "section": "7.7 Ejercicio 7",
+    "text": "7.7 Ejercicio 7\n\\[\n\\frac{dy}{dx}=\\frac{x}{x^2y+y^3}\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-8",
+    "href": "ejerciciosdiv1.html#ejercicio-8",
+    "title": "7  Ejercicios diversos",
+    "section": "7.8 Ejercicio 8",
+    "text": "7.8 Ejercicio 8\n\\[\nx\\frac{dy}{dx}+2y=\\frac{sen(x)}{x}; \\ y(2)=1\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-9",
+    "href": "ejerciciosdiv1.html#ejercicio-9",
+    "title": "7  Ejercicios diversos",
+    "section": "7.9 Ejercicio 9",
+    "text": "7.9 Ejercicio 9\n\\[\n\\frac{dy}{dx}=-\\frac{2xy+1}{x^2+2y}\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-10",
+    "href": "ejerciciosdiv1.html#ejercicio-10",
+    "title": "7  Ejercicios diversos",
+    "section": "7.10 Ejercicio 10",
+    "text": "7.10 Ejercicio 10\n\\[\n(3y^2+2xy)dx-(2xy+x^2)dy=0\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "ejerciciosdiv1.html#ejercicio-11",
+    "href": "ejerciciosdiv1.html#ejercicio-11",
+    "title": "7  Ejercicios diversos",
+    "section": "7.11 Ejercicio 11",
+    "text": "7.11 Ejercicio 11\n\\[\n(x^2+y)dx+(x+e^y)dy=0\n\\]",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Primer Orden",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ejercicios diversos</span>"
+    ]
+  },
+  {
+    "objectID": "avanzando.html",
+    "href": "avanzando.html",
+    "title": "8  En Construcción",
+    "section": "",
+    "text": "Apenas se anda llenando.",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Orden Superior",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>En Construcción</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "10  Resumen",
+    "section": "",
+    "text": "En resumen, ya no hay más contenido a estas alturas.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Resumen</span>"
+    ]
+  }
+]

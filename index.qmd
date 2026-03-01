@@ -1,0 +1,3 @@
+# Prefacio {.unnumbered}
+
+Este sitio refleja los apuntes realizados en clase, por lo que no hay mucha teoría en los mismos. Sin embargo, no se descarta que posteriormente comience a nutrirse con mayor contenido.
