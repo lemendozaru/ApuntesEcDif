@@ -1,0 +1,52 @@
+# Ecuaciones Diferenciales Homogéneas de Orden Superior (EDHOS)
+
+Cuando hablamos de ecuaciones diferenciales de orden superior nos referimos a expresiones que consisten de segunda derivada o mayores. Es decir, hablamos de expresiones que ya han sido derivadas más de una vez.
+
+Debido a esto, se sugiere conocer la nomenclatura clásica basada en diferenciales, además de la que se basa en apóstrofes. Por ejemplo, la expresión:
+
+$$
+\frac{d^2y}{dx^2}=xy
+$$
+
+puede expresarse también como:
+
+$$
+y''=xy
+$$
+
+y también como:
+
+$$
+D^2y=xy
+$$
+
+La segunda nomenclatura aún puede encontrarse en distintos recursos y literatura y resulta ser cómoda hasta que se llega a ecuaciones de orden superior al cuarto, donde ya se llena de apóstrofes. La tercera puede observarse en libros de texto más recientes y resulta bastante cómoda, sin importar el orden de la expresión. Debido a ello, estaremos utilizando las tres nomenclaturas, en virtud de su facilidad o conveniencia.
+
+## Solución fundamental de la Ecuación Diferencial Homogénea Superior
+
+Considere la ecuación diferencial lineal:
+
+$$
+L[y(x)]\equiv a \frac{d^2y}{dx^2}+b\frac{dy}{dx}+c y=g(x)
+$$
+
+donde $a$, $b$ y $c$ son funciones continuas en el intervalo $\alpha < x < \beta$. Si $g(x)=0$, estamos hablando de una ecuación homogénea superior. En caso contrario, es una ecuación no homogénea.
+
+Hemos introducido la notación $L[y(x)]$, para expresar la forma $ay''+by'+cy$. Se acostumbra referirse a $L$ como *operador diferencial* para abreviar toda la estructura indicada.
+
+Tratemos con el primer caso, aquellas en las que $Ly[(x)]=0$
+
+## Ecuaciones Homogéneas de Segundo Orden con coeficientes constantes
+
+Ya vimos que una ecuación diferencial de segundo orden es homogénea cuando:
+
+$$
+ay''+by'+cy=0
+$$
+
+En el caso, además, de que tanto $a$, $b$ y $c$ sean constantes, cabría preguntarnos ¿cuál es una función $y(x)$ para que, multiplicada por $c$ más $b$ veces su primera derivada más $a$ veces su segunda derivada sea igual a cero para toda $x$? Muy pocas funciones tienen este comportamiento, una de ellas y que será la que utilicemos es la *exponencial*, o también llamada *número de Euler*.
+
+Por lo tanto, su solución depende ahora de sus coeficientes $a$, $b$ y $c$. La solución se facilita bastante al convertir el problema de cálculo en uno algebraico. Veamos un ejemplo simbólico.
+
+
+
