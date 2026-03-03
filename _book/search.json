@@ -240,14 +240,36 @@
     ]
   },
   {
+    "objectID": "homogeneasSuperiores.html",
+    "href": "homogeneasSuperiores.html",
+    "title": "8  Ecuaciones Diferenciales Homogéneas de Orden Superior (EDHOS)",
+    "section": "",
+    "text": "8.1 Solución fundamental de la Ecuación Diferencial Homogénea Superior\nCuando hablamos de ecuaciones diferenciales de orden superior nos referimos a expresiones que consisten de segunda derivada o mayores. Es decir, hablamos de expresiones que ya han sido derivadas más de una vez.\nDebido a esto, se sugiere conocer la nomenclatura clásica basada en diferenciales, además de la que se basa en apóstrofes. Por ejemplo, la expresión:\n\\[\n\\frac{d^2y}{dx^2}=xy\n\\]\npuede expresarse también como:\n\\[\ny''=xy\n\\]\ny también como:\n\\[\nD^2y=xy\n\\]\nLa segunda nomenclatura aún puede encontrarse en distintos recursos y literatura y resulta ser cómoda hasta que se llega a ecuaciones de orden superior al cuarto, donde ya se llena de apóstrofes. La tercera puede observarse en libros de texto más recientes y resulta bastante cómoda, sin importar el orden de la expresión. Debido a ello, estaremos utilizando las tres nomenclaturas, en virtud de su facilidad o conveniencia.\nConsidere la ecuación diferencial lineal:\n\\[\nL[y(x)]\\equiv a \\frac{d^2y}{dx^2}+b\\frac{dy}{dx}+c y=g(x)\n\\]\ndonde \\(a\\), \\(b\\) y \\(c\\) son funciones continuas en el intervalo \\(\\alpha &lt; x &lt; \\beta\\). Si \\(g(x)=0\\), estamos hablando de una ecuación homogénea superior. En caso contrario, es una ecuación no homogénea.\nHemos introducido la notación \\(L[y(x)]\\), para expresar la forma \\(ay''+by'+cy\\). Se acostumbra referirse a \\(L\\) como operador diferencial para abreviar toda la estructura indicada.\nTratemos con el primer caso, aquellas en las que \\(Ly[(x)]=0\\)",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Orden Superior",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Ecuaciones Diferenciales Homogéneas de Orden Superior (EDHOS)</span>"
+    ]
+  },
+  {
+    "objectID": "homogeneasSuperiores.html#ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes",
+    "href": "homogeneasSuperiores.html#ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes",
+    "title": "8  Ecuaciones Diferenciales Homogéneas de Orden Superior (EDHOS)",
+    "section": "8.2 Ecuaciones Homogéneas de Segundo Orden con coeficientes constantes",
+    "text": "8.2 Ecuaciones Homogéneas de Segundo Orden con coeficientes constantes\nYa vimos que una ecuación diferencial de segundo orden es homogénea cuando:\n\\[\nay''+by'+cy=0\n\\]\nEn el caso, además, de que tanto \\(a\\), \\(b\\) y \\(c\\) sean constantes, cabría preguntarnos ¿cuál es una función \\(y(x)\\) para que, multiplicada por \\(c\\) más \\(b\\) veces su primera derivada más \\(a\\) veces su segunda derivada sea igual a cero para toda \\(x\\)? Muy pocas funciones tienen este comportamiento, una de ellas y que será la que utilicemos es la exponencial, o también llamada número de Euler.\nPor lo tanto, su solución depende ahora de sus coeficientes \\(a\\), \\(b\\) y \\(c\\). La solución se facilita bastante al convertir el problema de cálculo en uno algebraico. Veamos un ejemplo simbólico.",
+    "crumbs": [
+      "Ecuaciones Diferenciales de Orden Superior",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Ecuaciones Diferenciales Homogéneas de Orden Superior (EDHOS)</span>"
+    ]
+  },
+  {
     "objectID": "avanzando.html",
     "href": "avanzando.html",
-    "title": "8  En Construcción",
+    "title": "9  En Construcción",
     "section": "",
     "text": "Apenas se anda llenando.",
     "crumbs": [
-      "Ecuaciones Diferenciales de Orden Superior",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>En Construcción</span>"
+      "Transformada de Laplace",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>En Construcción</span>"
     ]
   },
   {

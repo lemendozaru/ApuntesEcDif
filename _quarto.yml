@@ -17,7 +17,7 @@ book:
         - ejerciciosdiv1.qmd
     - part: "Ecuaciones Diferenciales de Orden Superior"
       chapters:
-        - avanzando.qmd
+        - homogeneasSuperiores.qmd
     - part: "Transformada de Laplace"
       chapters:
         - avanzando.qmd
