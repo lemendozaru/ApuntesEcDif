@@ -253,7 +253,12 @@ window.Quarto = {
    
   <ul>
   <li><a href="#solución-fundamental-de-la-ecuación-diferencial-homogénea-superior" id="toc-solución-fundamental-de-la-ecuación-diferencial-homogénea-superior" class="nav-link active" data-scroll-target="#solución-fundamental-de-la-ecuación-diferencial-homogénea-superior"><span class="header-section-number">8.1</span> Solución fundamental de la Ecuación Diferencial Homogénea Superior</a></li>
-  <li><a href="#ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes" id="toc-ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes" class="nav-link" data-scroll-target="#ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes"><span class="header-section-number">8.2</span> Ecuaciones Homogéneas de Segundo Orden con coeficientes constantes</a></li>
+  <li><a href="#ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes" id="toc-ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes" class="nav-link" data-scroll-target="#ecuaciones-homogéneas-de-segundo-orden-con-coeficientes-constantes"><span class="header-section-number">8.2</span> Ecuaciones Homogéneas de Segundo Orden con coeficientes constantes</a>
+  <ul class="collapse">
+  <li><a href="#dos-raíces-reales" id="toc-dos-raíces-reales" class="nav-link" data-scroll-target="#dos-raíces-reales"><span class="header-section-number">8.2.1</span> Dos raíces reales</a></li>
+  <li><a href="#una-raíz-real" id="toc-una-raíz-real" class="nav-link" data-scroll-target="#una-raíz-real"><span class="header-section-number">8.2.2</span> Una raíz real</a></li>
+  <li><a href="#dos-raíces-complejas" id="toc-dos-raíces-complejas" class="nav-link" data-scroll-target="#dos-raíces-complejas"><span class="header-section-number">8.2.3</span> Dos raíces complejas</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -310,9 +315,85 @@ L[y(x)]\equiv a \frac{d^2y}{dx^2}+b\frac{dy}{dx}+c y=g(x)
 ay''+by'+cy=0
 \]</span></p>
 <p>En el caso, además, de que tanto <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> sean constantes, cabría preguntarnos ¿cuál es una función <span class="math inline">\(y(x)\)</span> para que, multiplicada por <span class="math inline">\(c\)</span> más <span class="math inline">\(b\)</span> veces su primera derivada más <span class="math inline">\(a\)</span> veces su segunda derivada sea igual a cero para toda <span class="math inline">\(x\)</span>? Muy pocas funciones tienen este comportamiento, una de ellas y que será la que utilicemos es la <em>exponencial</em>, o también llamada <em>número de Euler</em>.</p>
-<p>Por lo tanto, su solución depende ahora de sus coeficientes <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span>. La solución se facilita bastante al convertir el problema de cálculo en uno algebraico. Veamos un ejemplo simbólico.</p>
+<p>Por lo tanto, su solución depende ahora de sus coeficientes <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span>. La solución se facilita bastante al convertir el problema de cálculo en uno algebraico. Veamos un ejemplo simbólico en el que <span class="math inline">\(y=e^{rx}\)</span>, por lo que la ecuación se vuelve:</p>
+<p><span class="math display">\[
+L[e^{rx}] \equiv a(e^{rx})''+b(e^{rx})'+c(e^{rx})=0
+\]</span></p>
+<p>Recordemos que</p>
+<p><span class="math display">\[
+(e^{rx})'=re^{rx}
+\]</span></p>
+<p>y que</p>
+<p><span class="math display">\[
+(re^{rx})'=r^2e^{rx}
+\]</span></p>
+<p>Por lo que la expresión puede reescribirse:</p>
+<p><span class="math display">\[
+ar^2e^{rx}+bre^{rx}+ce^{rx}=0
+\]</span></p>
+<p>Factorizando por factor común:</p>
+<p><span class="math display">\[
+e^{rx}(ar^2+br+c)=0
+\]</span></p>
+<p>Y como <span class="math inline">\(e^{rx}\)</span> nunca puede ser igual a cero, entonces la solución debe salir justamente del otro factor, al que llamaremos <em>ecuación auxiliar</em>:</p>
+<p><span class="math display">\[
+ar^2+br+c=0
+\]</span></p>
+<p>Por lo que podemos concluir que existen solamente, o bien una o dos soluciones reales, o bien dos complejas, que se pueden determinar mediante la <strong>fórmula general</strong>, volviendo este problema en uno algebraico, tal como se dijo anteriormente.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Fórmula general
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+r_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\]</span></p>
+</div>
+</div>
+<section id="dos-raíces-reales" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="dos-raíces-reales"><span class="header-section-number">8.2.1</span> Dos raíces reales</h3>
+<p>Toca recordar que al ser una expresión cuadrática, <span class="math inline">\(r\)</span> tendrá dos valores reales siempre que <span class="math inline">\(b^2-4ac &gt; 0\)</span>. Por lo que la solución a la ecuación diferencial es</p>
+<p><span class="math display">\[
+y(x)=c_1 e^{r_1x}+c_2 e^{r_2x}
+\]</span></p>
+<section id="ejemplo" class="level4" data-number="8.2.1.1">
+<h4 data-number="8.2.1.1" class="anchored" data-anchor-id="ejemplo"><span class="header-section-number">8.2.1.1</span> Ejemplo</h4>
+<p>Determinar la solución particular de <span class="math inline">\(y''+5y'+6y=0\)</span> que satisfaga las condiciones iniciales <span class="math inline">\(y(0)=0\)</span>, <span class="math inline">\(y'(0)=1\)</span>.</p>
+</section>
+</section>
+<section id="una-raíz-real" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="una-raíz-real"><span class="header-section-number">8.2.2</span> Una raíz real</h3>
+<p>Habrá solo una raíz real cuando <span class="math inline">\(b^2-4ac = 0\)</span>, por lo que la solución es</p>
+<p><span class="math display">\[
+y(x)=c_1 e^{rx}+c_2 xe^{rx}
+\]</span></p>
+<section id="ejemplo-1" class="level4" data-number="8.2.2.1">
+<h4 data-number="8.2.2.1" class="anchored" data-anchor-id="ejemplo-1"><span class="header-section-number">8.2.2.1</span> Ejemplo</h4>
+<p>Determinar la solución general de <span class="math inline">\(y''+4y'+4y=0\)</span>.</p>
+</section>
+</section>
+<section id="dos-raíces-complejas" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="dos-raíces-complejas"><span class="header-section-number">8.2.3</span> Dos raíces complejas</h3>
+<p>Podríamos considerar este caso como uno que esperamos no sea muy frecuente, que es cuando <span class="math inline">\(b^2-4ac &lt; 0\)</span>. Esto se corresponde con soluciones imaginarias o números complejos. Existen pues dos maneras de expresar la solución, una en términos imaginarios:</p>
+<p><span class="math display">\[
+y(x)=c_1e^{(\lambda +i \mu)x}+c_2e^{(\lambda -i \mu)x}
+\]</span></p>
+<p>y otra en términos reales:</p>
+<p><span class="math display">\[
+y(x)=e^{\lambda x}(c_1 \mathrm{cos}\ \mu x+c_2 \mathrm{sen}\ \mu x)
+\]</span></p>
+<section id="ejemplo-2" class="level4" data-number="8.2.3.1">
+<h4 data-number="8.2.3.1" class="anchored" data-anchor-id="ejemplo-2"><span class="header-section-number">8.2.3.1</span> Ejemplo</h4>
+<p>Determinar la solución general de <span class="math inline">\(y''+y'+y=0\)</span></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

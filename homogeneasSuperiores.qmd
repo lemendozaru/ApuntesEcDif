@@ -46,7 +46,94 @@ $$
 
 En el caso, además, de que tanto $a$, $b$ y $c$ sean constantes, cabría preguntarnos ¿cuál es una función $y(x)$ para que, multiplicada por $c$ más $b$ veces su primera derivada más $a$ veces su segunda derivada sea igual a cero para toda $x$? Muy pocas funciones tienen este comportamiento, una de ellas y que será la que utilicemos es la *exponencial*, o también llamada *número de Euler*.
 
-Por lo tanto, su solución depende ahora de sus coeficientes $a$, $b$ y $c$. La solución se facilita bastante al convertir el problema de cálculo en uno algebraico. Veamos un ejemplo simbólico.
+Por lo tanto, su solución depende ahora de sus coeficientes $a$, $b$ y $c$. La solución se facilita bastante al convertir el problema de cálculo en uno algebraico. Veamos un ejemplo simbólico en el que $y=e^{rx}$, por lo que la ecuación se vuelve:
 
+$$
+L[e^{rx}] \equiv a(e^{rx})''+b(e^{rx})'+c(e^{rx})=0
+$$
+
+Recordemos que
+
+$$
+(e^{rx})'=re^{rx}
+$$
+
+y que
+
+$$
+(re^{rx})'=r^2e^{rx}
+$$
+
+Por lo que la expresión puede reescribirse:
+
+$$
+ar^2e^{rx}+bre^{rx}+ce^{rx}=0
+$$
+
+Factorizando por factor común:
+
+$$
+e^{rx}(ar^2+br+c)=0
+$$
+
+Y como $e^{rx}$ nunca puede ser igual a cero, entonces la solución debe salir justamente del otro factor, al que llamaremos *ecuación auxiliar*:
+
+$$
+ar^2+br+c=0
+$$
+
+Por lo que podemos concluir que existen solamente, o bien una o dos soluciones reales, o bien dos complejas, que se pueden determinar mediante la **fórmula general**, volviendo este problema en uno algebraico, tal como se dijo anteriormente.
+
+::: {.callout-note}
+
+## Fórmula general
+
+$$
+r_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+$$
+
+:::
+
+### Dos raíces reales
+
+Toca recordar que al ser una expresión cuadrática, $r$ tendrá dos valores reales siempre que $b^2-4ac > 0$. Por lo que la solución a la ecuación diferencial es
+
+$$
+y(x)=c_1 e^{r_1x}+c_2 e^{r_2x}
+$$
+
+#### Ejemplo
+
+Determinar la solución particular de $y''+5y'+6y=0$ que satisfaga las condiciones iniciales $y(0)=0$, $y'(0)=1$.
+
+### Una raíz real
+
+Habrá solo una raíz real cuando $b^2-4ac = 0$, por lo que la solución es
+
+$$
+y(x)=c_1 e^{rx}+c_2 xe^{rx}
+$$
+
+#### Ejemplo
+
+Determinar la solución general de $y''+4y'+4y=0$.
+
+### Dos raíces complejas
+
+Podríamos considerar este caso como uno que esperamos no sea muy frecuente, que es cuando $b^2-4ac < 0$. Esto se corresponde con soluciones imaginarias o números complejos. Existen pues dos maneras de expresar la solución, una en términos imaginarios:
+
+$$
+y(x)=c_1e^{(\lambda +i \mu)x}+c_2e^{(\lambda -i \mu)x}
+$$
+
+y otra en términos reales:
+
+$$
+y(x)=e^{\lambda x}(c_1 \mathrm{cos}\ \mu x+c_2 \mathrm{sen}\ \mu x)
+$$
+
+#### Ejemplo
+
+Determinar la solución general de $y''+y'+y=0$
 
 
