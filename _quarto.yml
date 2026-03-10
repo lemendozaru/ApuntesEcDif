@@ -15,7 +15,7 @@ book:
         - homogeneas.qmd
         - factint.qmd
         - ejerciciosdiv1.qmd
-        - maximaEDO.qmd
+        - CAS-EDO.qmd
     - part: "Ecuaciones Diferenciales de Orden Superior"
       chapters:
         - homogeneasSuperiores.qmd

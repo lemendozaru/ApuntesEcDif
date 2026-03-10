@@ -1,4 +1,4 @@
-# Solución de EDO con Maxima
+# Solución de EDO con un CAS
 
 Tomemos como ejemplo la EDO:
 
@@ -30,6 +30,8 @@ $$
 Se ha escrito el número de Euler con su otra nomenclatura (exp) para facilitar su lectura.
 
 :::
+
+## Maxima
 
 Ahora veamos cómo se resuelve utilizando el software CAS llamado Maxima. Introduzcamos la EDO anterior de manera que Maxima la reconozca.
 
@@ -78,3 +80,75 @@ Podemos observar que, salvo el orden, la solución dada es igual a la obtenida m
 En la salida, Maxima utiliza el símbolo `%` para indicar que son variables reservadas.
 
 :::
+
+## Octave
+
+Antes de cualquier cosa, será necesario instalar el paquete `Symbolic`:
+
+```octave
+pkg install -forge symbolic
+```
+
+::: {.callout-note}
+# Importante
+
+Octave necesita que el sistema tenga instalado *Python* y su librería *sympy*. Instálelos antes de utilizar Octave.
+
+:::
+
+Enseguida cargamos lo recién instalado:
+
+```octave
+pkg load symbolic
+```
+
+Ahora procedemos a resolver la misma EDO. Primero declaramos las variables dependiente e independiente:
+
+```octave
+1> syms y(x)
+```
+
+::: {.callout-note}
+# Nota
+
+Octave utiliza también un *prompt* para indicar entradas y salidas, pero son diferentes a los de Maxima. Las entradas colocan un número seguido de `>`. Las salidas anteponen el nombre de la variable solicitada o, si no asignamos una variable, pondrá `ans`.
+
+:::
+
+
+Luego, definimos la EDO:
+
+```octave
+2> eqdif=diff(y,x,1)==x*y
+```
+
+Octave debería devolver:
+
+```octave
+eqdif = (sym)
+
+  d
+  ──(y(x)) = x⋅y(x)
+  dx
+```
+
+Pedimos la solución de la EDO a Octave:
+
+```octave
+3> dsolve(eqdif)
+```
+
+Y nos debería arrojar:
+
+```octave
+ans = (sym)
+
+       2
+      x
+      ──
+      2
+  C₁⋅ℯ
+```
+
+
+
