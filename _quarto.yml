@@ -15,9 +15,11 @@ book:
         - homogeneas.qmd
         - factint.qmd
         - ejerciciosdiv1.qmd
+        - maximaEDO.qmd
     - part: "Ecuaciones Diferenciales de Orden Superior"
       chapters:
         - homogeneasSuperiores.qmd
+        - noHomoSup.qmd
     - part: "Transformada de Laplace"
       chapters:
         - avanzando.qmd

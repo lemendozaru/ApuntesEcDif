@@ -1,0 +1,80 @@
+# Solución de EDO con Maxima
+
+Tomemos como ejemplo la EDO:
+
+$$
+\frac{dy}{dx}=xy
+$$
+
+Sabemos que es una EDO separable, por lo que el procedimiento para resolverla es relativamente fácil:
+
+$$
+\frac{dy}{y}=x\ dx
+$$
+
+$$
+\int{\frac{dy}{y}}=\int{x\ dx}
+$$
+
+$$
+\mathrm{ln}|y|=\frac{x^2}{2}+C
+$$
+
+$$
+y=C\cdot \exp{\left(\frac{x^2}{2}\right)}
+$$
+
+::: {.callout-note}
+# Nota
+
+Se ha escrito el número de Euler con su otra nomenclatura (exp) para facilitar su lectura.
+
+:::
+
+Ahora veamos cómo se resuelve utilizando el software CAS llamado Maxima. Introduzcamos la EDO anterior de manera que Maxima la reconozca.
+
+```maxima
+(%i1) 'diff(y,x)x*y;
+```
+
+Un diferencial se expresa con el comando `diff()`, con la variable dependiente primero y enseguida la independiente, separadas por una `,`. Sin embargo, se le agrega la tilde para evitar que Maxima trate de derivar lo que pongamos dentro del mismo. Por otro lado, la multiplicación se indica de manera usual (con un asterisco). El `;` es necesario para terminar la sentencia.
+
+Maxima nos debe mostrar lo que "entendió", para así verificar que realmente es lo que quisimos decirle.
+
+```maxima
+                                   dy
+(%o1)                              ── = x y
+                                   dx
+```
+
+::: {.callout-note}
+# Importante
+
+En Maxima el cursor o *prompt* nos indica si la línea mostrada es una entrada o una salida. Las entradas comienzan como `(%in)`, donde `n` es el número de entrada. Cuando Maxima nos da un resultado, lo mostrará con `(%om)`, donde `m` es el número de salida.
+
+:::
+
+Ahora pidamos al software que calcule la solución general de esta expresión mediante el comando `ode2()`. El símbolo de porcentaje recupera la última expresión escrita, y se indica la dependiente y la independiente tal como se hizo anteriormente.
+
+```maxima
+(%i2) ode2(%,y,x);
+```
+
+Maxima nos debería mostrar el resultado así:
+
+```maxima
+                                         2
+                                        x
+                                        ──
+                                        2
+(%o2)                             y = %e   %c
+```
+
+Podemos observar que, salvo el orden, la solución dada es igual a la obtenida manualmente.
+
+::: {.callout-note}
+# Importante
+
+En la salida, Maxima utiliza el símbolo `%` para indicar que son variables reservadas.
+
+:::

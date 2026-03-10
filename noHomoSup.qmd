@@ -1,0 +1,24 @@
+# Ecuaciones Diferenciales no Homogéneas de Orden Superior
+
+## Coeficientes indeterminados
+
+Ya vimos que una ecuación diferencial de orden superior tiene la forma:
+
+$$
+a_ny^{n} + a_{n-1}y^{n-1} + ... + a_1y' + a_0y=g(x)
+$$
+
+Y que sabemos si es o no homogénea dependiendo del valor de $g(x)$. Ya abordamos el caso afirmativo, veamos ahora el de las no homogéneas. Las Ecuaciones Diferenciales de orden superior no homogéneas pueden resolverse mediante dos métodos: el de los Coeficientes indeterminados y el de Variación de parámetros. Comencemos por el primero.
+
+Este método puede usarse siempre y cuando el lado derecho de la misma sea un polinomio o una expresión exponencial. Entonces, el procedimiento para encontrar la solución particular pasa por hacer una suposición acerca de la respuesta al problema: la solución particular tiene la misma forma que dicho polinomio.
+
+::: {.callout-note}
+## Polinomios
+
+Una expresión algebraica es un polinomio siempre que no incluya fracciones donde el denominador contenga variables ni raíces de variables. Esto también incluye logaritmos, exponentes negativos y la tangente.
+:::
+
+
+
+
+
