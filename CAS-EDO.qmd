@@ -150,5 +150,50 @@ ans = (sym)
   C₁⋅ℯ
 ```
 
+### Valores iniciales
+
+Si deseamos resolver alguna ecuación diferencial con valores iniciales, los agregamos en la sentencia ``dsolve()` como argumentos secundarios.
+
+Por ejemplo, resolviendo
+
+$$
+y''-2y'+2y=0;
+$$
+
+$$
+y(0)=0, \ y'(0)=2
+$$
+
+Ejecutamos en Octave las siguientes líneas:
+
+```octave
+pkg load symbolic
+syms y(x)
+eq=diff(y,x,2)-2*diff(y,x,1)+2*y==0
+```
+
+Octave debe devolver la expresión:
+
+```octave
+eq = (sym)
+                         2
+             d          d
+  2⋅y(x) - 2⋅──(y(x)) + ───(y(x)) = 0
+             dx           2
+                        dx
+```
+
+La solución particular se obtiene mediante la siguiente línea:
+
+```octave
+solution = dsolve(eq, y(0)==0, diff(y)(0)==2 )
+```
+
+Teniendo como resultado lo que Octave muestra:
+
+```octave
+     x
+  2⋅ℯ ⋅sin(x)
+```
 
 

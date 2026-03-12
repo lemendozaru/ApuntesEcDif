@@ -22,3 +22,4 @@ Una expresión algebraica es un polinomio siempre que no incluya fracciones dond
 
 
 
+
