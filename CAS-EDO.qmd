@@ -152,7 +152,7 @@ ans = (sym)
 
 ### Valores iniciales
 
-Si deseamos resolver alguna ecuación diferencial con valores iniciales, los agregamos en la sentencia ``dsolve()` como argumentos secundarios.
+Si deseamos resolver alguna ecuación diferencial con valores iniciales, los agregamos en la sentencia `dsolve()` como argumentos secundarios.
 
 Por ejemplo, resolviendo
 
